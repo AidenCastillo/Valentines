@@ -24,29 +24,32 @@ const Yes = () => {
         let frameCount = 0;
 
         const moveImage = () => {
-          if (x + ref.current.offsetWidth > window.innerWidth || x < 0) {
-            xSpeed = -xSpeed;
-          }
-          if (y + ref.current.offsetHeight > window.innerHeight || y < 0) {
-            ySpeed = -ySpeed;
-          }
-          x += xSpeed;
-          y += ySpeed;
-          rotation += rotationSpeed;
+            // @ts-ignore: Object is possibly 'null'.
+            if (x + ref.current.offsetWidth > window.innerWidth || x < 0) {
+                xSpeed = -xSpeed;
+            }
+            // @ts-ignore: Object is possibly 'null'.
+            if (y + ref.current.offsetHeight > window.innerHeight || y < 0) {
+                ySpeed = -ySpeed;
+            }
+            x += xSpeed;
+            y += ySpeed;
+            rotation += rotationSpeed;
 
-          // Change velocities every 100 frames
-          if (frameCount % 1000 === 0) {
-            xSpeed = Math.random() * 4 - 2;
-            ySpeed = Math.random() * 4 - 2;
-          }
+            // Change velocities every 100 frames
+            if (frameCount % 1000 === 0) {
+                xSpeed = Math.random() * 4 - 2;
+                ySpeed = Math.random() * 4 - 2;
+            }
+            // @ts-ignore: Object is possibly 'null'.
+            ref.current.style.position = 'absolute';
+            // @ts-ignore: Object is possibly 'null'.
+            ref.current.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
 
-          ref.current.style.position = 'absolute';
-          ref.current.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
-
-          frameCount++;
-          requestAnimationFrame(moveImage);
-        };
-        moveImage();
+            frameCount++;
+            requestAnimationFrame(moveImage);
+            };
+            moveImage();
       }
     });
   }, []);
