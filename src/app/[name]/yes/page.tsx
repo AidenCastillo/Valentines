@@ -37,7 +37,7 @@ const Yes = () => {
             rotation += rotationSpeed;
 
             // Change velocities every 100 frames
-            if (frameCount % 1000 === 0) {
+            if (frameCount % 500 === 0) {
                 xSpeed = Math.random() * 4 - 2;
                 ySpeed = Math.random() * 4 - 2;
             }
