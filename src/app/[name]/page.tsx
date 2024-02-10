@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import styles from './page.module.css';
-import "./page.module.css";
+import styles from './name.module.css';
+import Image from 'next/image'; // Import the Image component
 
 const InitialPage = () => {
     let name = usePathname();
@@ -11,8 +11,8 @@ const InitialPage = () => {
     return (
         <body className={styles.body}>
             <div className={styles.stack}>
-                <img className={styles.koala} src="/koala.png" alt='koala' width={200} height={200}/>
-                <div>
+                <div className={styles.container}>
+                    <Image className={styles.koala} src="/koala.png" alt='koala' width={200} height={200}/>
                     <h1>Be my Valentine {name}</h1>
                     <div className={styles.question_container}>
                         <h2>Do you want to be my Valentine?</h2>

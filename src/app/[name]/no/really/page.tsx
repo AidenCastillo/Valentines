@@ -15,6 +15,8 @@ const Really = () => {
 
     if (numericValue === 100) {
       window.location.href = `/${name}/yes`;
+    } else if (numericValue === 0) {
+      window.location.href = `/${name}/no/really/seriously`;
     }
   };
   return (

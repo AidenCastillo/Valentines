@@ -66,10 +66,17 @@ const Yes = () => {
                 ))}
 
                 <div className={styles.container}>
+                    <Image className={styles.valentinesDay} src={"/valentinesDay.png"} alt="valentinesDay" width={200} height={200} />
                     <h1>Yippie! You said yes!</h1>
                     <div>
                         <h2>Thanks for being my Valentine!</h2>
+                        <h2>Let&rsquo;s make this a day to remember!</h2>
                     </div>
+                    <div className={styles.heartContainer}>
+                        <Image className={styles.heart} src={"/heart.png"} alt="heart" width={100} height={100} />
+                        <Image className={styles.heart2} src={"/heart2.png"} alt="heart" width={100} height={100} />
+                    </div>
+
                 </div>
                 
             </div>

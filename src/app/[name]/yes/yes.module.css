@@ -14,6 +14,23 @@
     }
 }
 
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 .container {
     display: flex;
@@ -21,4 +38,37 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+.valentinesDay {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation : turn 2s linear infinite;
+}
+
+.heartContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    transform: rotate(-45deg);
+    margin: 50px;
+    animation : turn 2s linear infinite;
+}
+
+.heart2 {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    transform: rotate(45deg);
+    margin: 50px;
+    animation : turn 2s linear infinite;
 }
